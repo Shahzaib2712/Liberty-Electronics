@@ -1,0 +1,78 @@
+.logo {
+    width: 50px;
+    cursor: pointer;
+    margin: 0px 0;
+}
+
+.nav-link {
+    font-size: 18px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: black !important;
+    border-radius: 1px;
+    color: white !important;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.cards div {
+    border: 1px solid lightgrey;
+    position: relative;
+    width: 250px;
+    height: 380px;
+    margin: 10px;
+    text-align: center;
+    background: #fff;
+    padding: 7px;
+}
+
+.cards div:hover {
+    box-shadow: 0 0 10px 0 #fff;
+}
+
+.cards div img {
+    width: 240px;
+    height: 200px;
+}
+
+.cards div p {
+    color: dodgerblue;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-variant: small-caps;
+}
+
+.cards div h1 {
+    color: #333333;
+    font-size: 17px;
+    font-family: sans-serif;
+    width: 100%;
+    height: auto;
+}
+
+.cards div h3 {
+    color: blue;
+}
+
+.cards div button {
+    position: relative;
+    top: 10px;
+    width: 120px;
+    background: dodgerblue;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: black;
+}

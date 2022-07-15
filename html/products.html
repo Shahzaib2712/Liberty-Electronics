@@ -1,0 +1,925 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    .card>img {
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .card:hover>img {
+        transform: scale(1.1);
+    }
+</style>
+
+<body onload="showusername()">
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="background-color: aqua;">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="../img/logo.png" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item ms-1">
+                        <a class="nav-link active" aria-current="page" href="../html/index.html">Home</a>
+                    </li>
+                    <li class="nav-item ms-1">
+                        <a class="nav-link hover" style="background-color:black;border-radius: 1px;color: white;" href="../html/products.html">Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Brands
+                        </a>
+                        <ul class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-white" href="../html/apple.html">APPLE</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/samsung.html">SAMSUNG</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/motorola.html">MOTOROLA</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/dell.html">DELL</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/hp.html">HP</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/dawlance.html">DAWLANCE</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/haier.html">HAIER</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/gree.html">GREE</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/pel.html">PEL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-1" onclick="addcards()">
+                        <a class="nav-link" href="../html/cart.html">Cart</a>
+                    </li>
+                    <li class="nav-item ms-1">
+                        <a class="nav-link" href="../html/login.html">Login</a>
+                    </li>
+                    <li class="nav-item ms-1">
+                        <a class="nav-link" style="cursor: pointer;" id="aboutuspage">Contact Us</a>
+                    </li>
+                    <li class="nav-item ms-1">
+                        <a class="nav-link   text-dark" id="setusername"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="aboutuspagetoggle" class="mt-4 pt-5" style="width: 100%;transition:all 0.5s ease;position:absolute;top: 20px;left:0;z-index: 2; color: white;background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">
+                    <img src="../img/logo.png" style="width: 80px;cursor: pointer;margin: 0px 0;" class="ms-5">
+                </div>
+                <div class="col-md-5">
+                    <h3 class="text-uppercase fw-bold mb-4 ms-5">
+                        LIBERTY ELCTRONICS
+                    </h3>
+                    <h3 class="text-uppercase fw-bold mb-4 ms-5">
+                        Call Us
+                    </h3>
+                    <h6 class="text-uppercase fw-bold mb-4 ms-5">Call our team</h6>
+                    <p class="text-uppercase fw-bold mb-4 ms-5">+92 3101010101</p>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.2698039617176!2d67.12120641447679!3d24.82044525297398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ba09c24ad91%3A0x23320c2fdcb48428!2sAptech%20Learning%20Korangi!5e0!3m2!1sen!2s!4v1653071226827!5m2!1sen!2s"
+                        width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mb-5"></iframe>
+                </div>
+
+            </div>
+            <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2022 Copyright:
+                <a class="text-reset fw-bold" href "...">Liberty Electronics</a>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="container  mt-5 mb-5">
+        <div class="row" id="apple_cards">
+
+        </div>
+    </div>
+    <!-- cart start -->
+    <!-- Footer Start -->
+    <footer>
+        <div class="text-white w-100" style="background-color:black;">
+            <div class="container">
+                <div class="row pt-3">
+                    <div class="col-md-4">
+                        <p>Get connected with us on social networks:
+                        </p>
+                    </div>
+                    <div class="offset-md-4 col-md-4">
+                        <ul class="list-unstyled">
+                            <li class="d-inline-block ms-3"><i class="fab fa-google-plus-g fa-2x" style="cursor: pointer;"></i></li>
+                            <li class="d-inline-block ms-3"><i class="fab fa-google-play fa-2x" style="cursor: pointer;"></i></li>
+                            <li class="d-inline-block ms-3"><i class="fab fa-whatsapp-square fa-2x" style="cursor: pointer;"></i></li>
+                            <li class="d-inline-block ms-3"><i class="fab fa-instagram fa-2x" style="cursor: pointer;"></i></li>
+                            <li class="d-inline-block ms-3"><i class="fab fa-twitter-square fa-2x" style="cursor: pointer;"></i></li>
+                            <li class="d-inline-block ms-3"><i class="fab fa-facebook-square fa-2x" style="cursor: pointer;"></i></li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+                <hr>
+
+                <div class="row mt-5">
+                    <div class="col-md-3 text-sm-center">
+                        <img src="../img/logo.png" style="height: 100px; width: 150px;" class="mb-5">
+                        <h3 class="text-uppercase fw-bold mb-4">
+                            Liberty Electronics
+                        </h3>
+                        <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste ipsum ipsa, voluptatem libero nobis quibusdam.</p>
+                    </div>
+
+                    <div class="col-md-2 text-sm-center">
+                        <h3 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h3>
+                        <ul type="none" class="...">
+                            <li><a href="../html/apple.html" class="text-white">Apple</a></li>
+                            <li><a href="../html/dawlance.html" class="text-white">Dawlance</a></li>
+                            <li><a href="../html/dell.html" class="text-white">Dell</a></li>
+                            <li><a href="../html/gree.html" class="text-white">Gree</a></li>
+                            <li><a href="../html/samsung.html" class="text-white">Samsung</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 text-sm-center">
+                        <h3 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h3>
+                        <ul type="none">
+                            <li><a href="../html/index.html" class="text-white">Home</a></li>
+                            <li><a href="../html/products.html" class="text-white">Products</a></li>
+                            <li><a href="../html/login.html" class="text-white">Login</a></li>
+                            <li><a href="../html/about.html" class="text-white">About</a></li>
+                            <li><a href="../html/cart.html" class="text-white">Cart</a></li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i> info@example.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+            </section>
+            <!-- Section: Links  -->
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2021 Copyright:
+                <a class="text-reset fw-bold" href="../html/index.html">LIBERTY ELECTRONICS</a>
+            </div>
+            <!-- Copyright -->
+        </div>
+
+
+        </div>
+        </div>
+    </footer>
+
+
+    <!-- Footer End -->
+
+    <script>
+        $(document).ready(function() {
+            $('#aboutuspagetoggle').fadeOut(0);
+
+            $('#aboutuspage').click(function() {
+
+                $('#aboutuspagetoggle').fadeToggle(1000);
+
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+    <script src="../bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        let array = [
+
+            {
+                id: 1,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dawlance items/Avante-Green daw refri.png",
+                title: "DAWLANCE",
+                desc: "REF 9191 WB AVANTE",
+                price: "$377"
+            }, {
+                id: 2,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dawlance items/Daw REF9150.png",
+                title: "DAWLANCE",
+                desc: "REF 9150 LF",
+                price: "$255"
+            }, {
+                id: 3,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dawlance items/Dawlance-DDW-1350-micro wave.jpg",
+                title: "DAWLANCE",
+                desc: "DW 1350 S",
+                price: "$410"
+            }, {
+                id: 4,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dawlance items/daw elegance-45 AC.jpg",
+                title: "DAWLANCE",
+                desc: "ELEGANCE INVERTER-45 AC",
+                price: "$860"
+            }, {
+                id: 5,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dawlance items/dawlance oven.png",
+                title: "DAWLANCE",
+                desc: "MICROWAVE OVEN DW-530 AF",
+                price: "$155"
+            }, {
+                id: 6,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dawlance items/dawlance-french-door-dfd900.jpg",
+                title: "DAWLANCE",
+                desc: "DW 900 GD DFD",
+                price: "$750"
+            }, {
+                id: 7,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dawlance items/multi cooker 3015.jpg",
+                title: "DAWLANCE",
+                desc: "DAWLANCE ELECTRIC KETTLE DWEK-7210",
+                price: "$25"
+            }, {
+                id: 8,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dawlance items/dw-295 oven.jpg",
+                title: "DAWLANCE",
+                desc: "DAWLANCE DW-295 MICROWAVE OVEN",
+                price: "$70"
+            }, {
+                id: 9,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dawlance items/hood DCT-9630-Sa series.png",
+                title: "DAWLANCE",
+                desc: "DAWLANCE DCT 9630 S",
+                price: "$270"
+            }, {
+                id: 10,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/pel items/PEL-Refrigerator-PRGD-M150-miror 6450.jpg",
+                title: "PEL",
+                desc: "PEL REFRIGERATOR PRGD-21950",
+                price: "$290"
+            }, {
+                id: 11,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/pel items/pel microwave 20ltr.jpg",
+                title: "PEL",
+                desc: "PEL CLASSIC MICROWAVE PMO20B 20LTR",
+                price: "$60"
+            }, {
+                id: 12,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/pel items/pel-pawm-900i-washing-machine-topload.jpg",
+                title: "PEL",
+                desc: "PEL WASHING MACHINE PAWM-900i",
+                price: "$250"
+            }, {
+                id: 13,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/pel items/prl-22250 ref.png",
+                title: "PEL",
+                desc: "PEL PRL-22250 JUMBO REFRIGERATOR 20CFT",
+                price: "$300"
+            }, {
+                id: 14,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/pel items/pwm-8050 washing machine.jpg",
+                title: "PEL",
+                desc: "PEL WASHING MACHINE SEMI AUTO 8050",
+                price: "$100"
+            }, {
+                id: 15,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/refrigerator/pel-prgd-1400-desire-glass-door-refrigerator_450.jpeg",
+                title: "PEL",
+                desc: "PEL REFRIGERATOR PRGD-1400 DESIRE",
+                price: "$185"
+            }, {
+                id: 16,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/Pel.jpg",
+                title: "PEL",
+                desc: "PEL PRGD-6350GD REFRIGERATOR",
+                price: "$275"
+            }, {
+                id: 17,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/LED/pel-32-inch.jpg",
+                title: "PEL",
+                desc: "PEL 32 INCH FULL HD TV",
+                price: "$120"
+            }, {
+                id: 18,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/oven/PEL-PMO-23-ltr-Grill-Microwave-Oven.png",
+                title: "PEL",
+                desc: "PEL PMO 23-M MICROWAVE OVEN 23LTR",
+                price: "$80"
+            }, {
+                id: 19,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/LED/pel 39inchcurved smart led.jpg",
+                title: "PEL",
+                desc: "PEL CURVED SCREEN LED TV 4K 39 INCE",
+                price: "$60"
+            }, {
+                id: 20,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/AC/Gree-1.5-ton-18LM-Conventional-Split-Ac.png",
+                title: "GREE",
+                desc: "GREE 1.5TON AC",
+                price: "$550"
+            }, {
+                id: 21,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/gree items/GF-24FWH_floor standing AC.png",
+                title: "GREE",
+                desc: "GREE GF-24FW FLOOR STANDING AC",
+                price: "$1000"
+            }, {
+                id: 22,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/gree items/GR-N310V-CC1-500x500-1-300x300 ref.png",
+                title: "GREE",
+                desc: "GREE GR-N310V-CC1 REFRIGERATOR",
+                price: "$300"
+            }, {
+                id: 23,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/gree items/Gree-French-door-ref-nofrost-250G.png",
+                title: "GREE",
+                desc: "GREE FRENCH-DOOR 250G REFRIGERATOR",
+                price: "$800"
+            }, {
+                id: 24,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/refrigerator/floral-black-gree.png",
+                title: "GREE",
+                desc: "GREE E8890-CB1 REFRIGERATOR",
+                price: "$400"
+            }, {
+                id: 25,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/gree items/gree split AC.jpg",
+                title: "GREE",
+                desc: "GREE GS-12LM4 1TON AC",
+                price: "$550"
+            }, {
+                id: 26,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/gree items/gree-gs-18fith.png",
+                title: "GREE",
+                desc: "GREE GS-12FITH-1CW 1TON AC",
+                price: "$500"
+            }, {
+                id: 27,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/gree items/hot and cool 1ton AC.png",
+                title: "GREE",
+                desc: "GREE HEAT & COOL GS-18PITH14S 1.5TON ",
+                price: "$600"
+            }, {
+                id: 28,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/Apple-iphone-13-Pink.png",
+                title: "IPHONE",
+                desc: "IPHONE 13 4GB RAM 512GB ROM",
+                price: "$1100"
+            }, {
+                id: 29,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/apple-iphone-12-pro-max.jpg",
+                title: "IPHONE",
+                desc: "IPHONE 12 6GB RAM 256GB ROM",
+                price: "$1000"
+            }, {
+                id: 30,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/apple-iphone-7-red.jpg",
+                title: "IPHONE",
+                desc: "IPHONE 7 2GB RAM 32GB ROM",
+                price: "$370"
+            }, {
+                id: 31,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/apple-iphone-x.jpg",
+                title: "IPHONE",
+                desc: "IPHONE X 4GB RAM 256GB ROM ",
+                price: "$400"
+            }, {
+                id: 32,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/apple-laptop-macbook 2022.jpg",
+                title: "LAPTOP",
+                desc: " MACBOOK PRO 5TH GEN 14 INCH ",
+                price: "$1100"
+            }, {
+                id: 33,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/apple-macbook-air-13 m1.jpg",
+                title: "LAPTOP",
+                desc: "MACBOOK AIR 13INCH 512GB RAM",
+                price: "$1300"
+            }, {
+                id: 34,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/apple_ipadOS14.jpg",
+                title: "IPAD",
+                desc: "IPAD 8GEN ",
+                price: "$400"
+            }, {
+                id: 35,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/ipad pro 4th gen.jpg",
+                title: "IPAD",
+                desc: "IPAD PRO 4TN GEN",
+                price: "$1080"
+            }, {
+                id: 36,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/ipad-pro-12 space grey.jpg",
+                title: "IPAD",
+                desc: "IPAD PRO 12 128 GB",
+                price: "$1200"
+            }, {
+                id: 37,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/iphone6s.png",
+                title: "IPHONE",
+                desc: "IPHONE 6 128GB RAM 2GB ROM",
+                price: "$280"
+            }, {
+                id: 38,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/silver-ipad-pro-11-inch-transparent.png",
+                title: "IPAD",
+                desc: "IPAD PRO 11INCH 256GB RAM",
+                price: "$200"
+            }, {
+                id: 39,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/laptop/Apple_16-inch-MacBook-Pro.jpg",
+                title: "LAPTOP",
+                desc: "MACBOOK PRO 16INCH 512GB SSD",
+                price: "$2500"
+            }, {
+                id: 40,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/laptop/macbook-pro.jpg",
+                title: "LAPTOP",
+                desc: "MACBOOK PRO 13INCH 256GB SSD",
+                price: "$1300"
+            }, {
+                id: 41,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/apple items/M1-MacBook-Air-1.jpg",
+                title: "Laptop",
+                desc: "MACBOOK AIR M1 13.3INCH 256GB",
+                price: "$1000"
+            }, {
+                id: 42,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dell/Dell-Inspiron-15-3511-1.png",
+                title: "DELL",
+                desc: "DELL INSPIRON 3511 Ci5 11TH GEN",
+                price: "$620"
+            }, {
+                id: 43,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dell/Dell-Inspiron-5481.jpg",
+                title: "DELL",
+                desc: "DELL INSPIRON 5481 Ci3 8TH GEN",
+                price: "$490"
+            }, {
+                id: 44,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dell/Dell-XPS.jpg",
+                title: "DELL",
+                desc: "DELL XPS 13 9310 Ci7 11TH GEN",
+                price: "$1960"
+            }, {
+                id: 45,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dell/Dell_Inspiron_15.jpg",
+                title: "DELL",
+                desc: "DELL INSPIRON 15 5510 Ci5 11TH GEN",
+                price: "$810"
+            }, {
+                id: 46,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dell/dell inspiron 3511.jpg",
+                title: "DELL",
+                desc: "DELL INSPIRON 3511 Ci7 11TH GEN",
+                price: "$820"
+            }, {
+                id: 47,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dell/dell inspiron 7000.jpg",
+                title: "DELL",
+                desc: "DELL INSPIRON 15 7000 SERIES 7591 Ci7 9TH GEN",
+                price: "$1000"
+            }, {
+                id: 48,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/dell/laptop_latitude_3420.jpg",
+                title: "DELL",
+                desc: "DELL LATITUDE 3420",
+                price: "$1250"
+            }, {
+                id: 49,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/laptop/dell_latitude_3320.jpg",
+                title: "DELL",
+                desc: "DELL LATITUDE 3320",
+                price: "$1300"
+            }, {
+                id: 50,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/laptop/hp notebook.jpg",
+                title: "HP",
+                desc: "HP NOTEBOOK 15SERIES",
+                price: "$480"
+            }, {
+                id: 51,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/laptop/HP-Probook-450.jpg",
+                title: "HP",
+                desc: "HP PROBOOK 450 Ci5 11TH GEN",
+                price: "$800"
+            }, {
+                id: 52,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/hp/hp 15 dw3145.png",
+                title: "HP",
+                desc: "HP 15-DW3145ne Ci7 11TH GEN",
+                price: "$1000"
+            }, {
+                id: 53,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/hp/hp elite book.jpg",
+                title: "HP",
+                desc: "HP ELITEBOOK 840 Ci5 4TH GEN",
+                price: "$2000"
+            }, {
+                id: 54,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/hp/hp envy.jpg",
+                title: "HP",
+                desc: "HP ENVY X360 15 Ci8 9TH GEN",
+                price: "$680"
+            }, {
+                id: 55,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/hp/hp notebook 15.png",
+                title: "HP",
+                desc: "HP NOTEBOOK 15SERIES Ci5 5TH GEN",
+                price: "$500"
+            }, {
+                id: 56,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/hp/hp pavilion.png",
+                title: "HP",
+                desc: "HP PAVILION 15 Ci7 11TH GEN",
+                price: "$870"
+            }, {
+                id: 57,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/hp/hp specter.jpg",
+                title: "HP",
+                desc: "HP SPECTER Ci7 11TH GEN",
+                price: "$1500"
+            }, {
+                id: 58,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/samsung items/galaxy tab a8.jpg",
+                title: "SAMSUNG",
+                desc: "SAMSUNG GALAXY TAB A8",
+                price: "$250"
+            }, {
+                id: 59,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/samsung items/Samsung-Galaxy-A72.jpg",
+                title: "SAMSUNG",
+                desc: "SAMSUNG GALAXY A72",
+                price: "$400"
+            }, {
+                id: 60,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/samsung items/Samsung-Galaxy-Tab-S8-Plus.jpg",
+                title: "SAMSUNG",
+                desc: "SAMSUNG GALAXY TAB S8+",
+                price: "$1100"
+            }, {
+                id: 61,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/samsung items/samsung amoled scree.jpg",
+                title: "SAMSUNG",
+                desc: "SAMSUNG AMOLED SCREEN LAPTOP",
+                price: "$1000"
+            }, {
+                id: 62,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/samsung items/samsung notebook.jpeg",
+                title: "SAMSUNG",
+                desc: "SAMSUNG NOTEBOOK 5",
+                price: "$1300"
+            }, {
+                id: 63,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/samsung items/samsung ultrabook.jpg",
+                title: "SAMSUNG",
+                desc: "SAMSUNG ULTRA BOOK",
+                price: "$1100"
+            }, {
+                id: 64,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/samsung items/samsung_galaxy_tab_s6.jpg",
+                title: "SAMSUNG",
+                desc: "SAMSUNG GALAXY TAB S6",
+                price: "$900"
+            }, {
+                id: 65,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/samsung items/tab A7.jpg",
+                title: "SAMSUNG",
+                desc: "SAMSUNG TAB A7",
+                price: "$1050"
+            }, {
+                id: 66,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/mobiles/galaxy-f52-5g.jpg",
+                title: "SAMSUNG",
+                desc: "SAMSUNG GALAXY S21 F52 5G",
+                price: "$1000"
+            }, {
+                id: 67,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/mobiles/GalaxyS22plus.jpg",
+                title: "SAMSUNG",
+                desc: "SAMSUNG GALAXY S22 ULTRA",
+                price: "$1100"
+            }, {
+                id: 68,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/mobiles/samsung-galaxy-z-flip-5g-2.png",
+                title: "SAMSUNG",
+                desc: "SAMSUNG GALAXY Z-FLIP 5G",
+                price: "$900"
+            }, {
+                id: 69,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/motorola items/Moto_Edge_X3020.jpeg",
+                title: "MOTOROLA",
+                desc: "MOTO EDGE X3020",
+                price: "$400"
+            }, {
+                id: 70,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/motorola items/Motorola-Edge-20-Pro.jpg",
+                title: "MOTOROLA",
+                desc: "MOTOROLA EDGE 20 PRO",
+                price: "$550"
+            }, {
+                id: 71,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/motorola items/motorola-tab-g20.jpg",
+                title: "MOTOROLA",
+                desc: "MOTOROLA TAB G20",
+                price: "$300"
+            }, {
+                id: 72,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/motorola items/motorola-tab-g90.jpg",
+                title: "MOTOROLA",
+                desc: "MOTOROLA TAB G90",
+                price: "$500"
+            }, {
+                id: 73,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/motorola items/moto g100.jpg",
+                title: "MOTOROLA",
+                desc: "MOTOROLA G100",
+                price: "$700"
+            }, {
+                id: 74,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/motorola items/moto g31.jpg",
+                title: "MOTOROLA",
+                desc: "MOTO G31",
+                price: "$600"
+            }, {
+                id: 75,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/motorola items/moto tab G70.png",
+                title: "MOTOROLA",
+                desc: "MOTO TAB G70",
+                price: "$550"
+            }, {
+                id: 76,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/motorola items/motorola-moto-tab-8.jpg",
+                title: "MOTOROLA",
+                desc: "MOTO TAB 8",
+                price: "$450"
+            }, {
+                id: 77,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/HAIER-AC 1.5ton.png",
+                title: "HAIER",
+                desc: "HAIER AC 1.5TON",
+                price: "$700"
+            }, {
+                id: 78,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/haier c290t hoods.png",
+                title: "HAIER",
+                desc: "HAIER C290T HOODS",
+                price: "$200"
+            }, {
+                id: 79,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/HRF-663ATA2.png",
+                title: "HAIER",
+                desc: "HAIER HRF-663ATA2",
+                price: "$300"
+            }, {
+                id: 80,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/HRF220TS3.png",
+                title: "HAIER",
+                desc: "HAIER HRF220TS3",
+                price: "$400"
+            }, {
+                id: 81,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/haier doubledoorefr.png",
+                title: "HAIER",
+                desc: "HAIER DOUBLE DOOR REFRIGERATOR",
+                price: "100"
+            }, {
+                id: 82,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/haier geeyser 5ltr.png",
+                title: "HAIER",
+                desc: "HAIER GEEYSER",
+                price: "$100"
+            }, {
+                id: 83,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/hdl-30mx80 haier oven.png",
+                title: "HAIER",
+                desc: "HAIER HDL-30MX80 OVEN",
+                price: "$150"
+            }, {
+                id: 84,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/hwm-100bs washingmachine.png",
+                title: "HAIER",
+                desc: "HAIER HWM-100BS WASHING MACHINE",
+                price: "$200"
+            }, {
+                id: 85,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/refrigerator/haier 12cft.png",
+                title: "HAIER",
+                desc: "HAIER 12CFT REFRIGERATOR",
+                price: "$400"
+            }, {
+                id: 86,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/refrigerator/Haier-Inverter-Refrigerator-HRF-438.jpg",
+                title: "HAIER",
+                desc: "HAIER HRF-438 REFRIGERATOR",
+                price: "$350"
+            }, {
+                id: 87,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/AC/haier AC.png",
+                title: "HAIER",
+                desc: "HAIER AC 1TON",
+                price: "$550"
+            },
+
+
+        ]
+
+        function showapplecards() {
+
+            for (var i = 0; i < array.length; i++) {
+
+
+
+                document.getElementById("apple_cards").innerHTML += `
+  <div class="col-md-4">
+    <div class="card p-3 rounded mt-4">
+        <img src="${array[i].src}"  width="100%"  height="350px"/>
+        <h3 class="mt-5">${array[i].title}</h3>
+        <p>${array[i].desc}</p>
+        <h4>${array[i].price}</h4>
+        <div class="d-flex justify-content-center">
+       <a href="./moreinfocard.html">
+            <button class="btn btn-primary  mx-auto mt-3" onclick="moreinfocard(${array[i].id})" ></i>MORE INFO</button>
+        </a>
+            <button class="btn btn-primary  mx-auto mt-3" onclick="addtocart(${array[i].id})"></i>Add To Cart</button>
+        </div>
+        </div>
+    </div>
+    
+
+`
+
+            }
+        }
+        let newarr = [];
+        let obj = {};
+
+        function moreinfocard(id) {
+            let infocard;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i].id == id) {
+                    infocard = {
+                        id: array[i].id,
+                        title: array[i].title,
+                        src: array[i].src,
+                        desc: array[i].desc,
+                        price: array[i].price,
+                        fulldesc: array[i].fulldesc
+                    }
+                }
+            }
+
+            infocard = JSON.stringify(infocard);
+            localStorage.setItem("infocard", infocard);
+
+
+        }
+
+        function addtocart(id) {
+            alert('Cart Added')
+            for (var i = 0; i < array.length; i++) {
+                if (array[i].id == id) {
+                    obj = {
+                        id: array[i].id,
+                        title: array[i].title,
+                        src: array[i].src,
+                        desc: array[i].desc,
+                        price: array[i].price,
+                    }
+
+                }
+
+            }
+            newarr.push(obj);
+            console.log(newarr)
+        }
+
+        function addcards() {
+            newarr = JSON.stringify(newarr);
+            localStorage.setItem("product1", newarr);
+
+        }
+        showapplecards();
+    </script>
+
+    <style>
+        .contactformshow {
+            top: 20px;
+        }
+    </style>
+</body>
+
+</html>

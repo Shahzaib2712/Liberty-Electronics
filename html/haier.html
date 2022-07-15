@@ -1,0 +1,377 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    .card>img {
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .card:hover>img {
+        transform: scale(1.1);
+    }
+</style>
+
+<body onload="showusername()">
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="background-color: aqua;">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="../img/logo.png" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item ms-1">
+                        <a class="nav-link active" aria-current="page" href="../html/index.html">Home</a>
+                    </li>
+                    <li class="nav-item ms-1">
+                        <a class="nav-link" href="../html/products.html">Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle hover" style="background-color:black;border-radius: 1px;color: white;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Brands
+                        </a>
+                        <ul class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-white" href="../html/apple.html">APPLE</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/samsung.html">SAMSUNG</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/motorola.html">MOTOROLA</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/dell.html">DELL</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/hp.html">HP</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/dawlance.html">DAWLANCE</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/haier.html">HAIER</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/gree.html">GREE</a></li>
+                            <li><a class="dropdown-item text-white" href="../html/pel.html">PEL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-1" onclick="addcards()">
+                        <a class="nav-link" href="../html/cart.html">Cart</a>
+                    </li>
+                    <li class="nav-item ms-1">
+                        <a class="nav-link" href="../html/login.html">Login</a>
+                    </li>
+                    <li class="nav-item ms-1">
+                        <a class="nav-link" style="cursor: pointer;" id="aboutuspage">Contact Us</a>
+                    </li>
+                    <li class="nav-item ms-1">
+                        <a class="nav-link   text-dark" id="setusername"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="aboutuspagetoggle" class="mt-4 pt-5" style="width: 100%;transition:all 0.5s ease;position:absolute;top: 20px;left:0;z-index: 2; color: white;background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">
+                    <img src="../img/logo.png" style="width: 80px;cursor: pointer;margin: 0px 0;" class="ms-5">
+                </div>
+                <div class="col-md-5">
+                    <h3 class="text-uppercase fw-bold mb-4 ms-5">
+                        LIBERTY ELCTRONICS
+                    </h3>
+                    <h3 class="text-uppercase fw-bold mb-4 ms-5">
+                        Call Us
+                    </h3>
+                    <h6 class="text-uppercase fw-bold mb-4 ms-5">Call our team</h6>
+                    <p class="text-uppercase fw-bold mb-4 ms-5">+92 3101010101</p>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.2698039617176!2d67.12120641447679!3d24.82044525297398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ba09c24ad91%3A0x23320c2fdcb48428!2sAptech%20Learning%20Korangi!5e0!3m2!1sen!2s!4v1653071226827!5m2!1sen!2s"
+                        width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mb-5"></iframe>
+                </div>
+
+            </div>
+            <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2022 Copyright:
+                <a class="text-reset fw-bold" href "...">Liberty Electronics</a>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- img start -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="../img//haier items/Banner_1.png" class="mt-5 w-100 h-75">
+            </div>
+        </div>
+    </div>
+    <!-- img end -->
+    <!-- cart start -->
+    <div class="container  mt-5 mb-5">
+        <div class="row" id="apple_cards">
+
+        </div>
+    </div>
+    <!-- cart end -->
+    <!-- Footer Start -->
+    <footer>
+        <div class="text-white w-100" style="background-color:black;">
+            <div class="container">
+                <div class="row pt-3">
+                    <div class="col-md-4">
+                        <p>Get connected with us on social networks:
+                        </p>
+                    </div>
+                    <div class="offset-md-4 col-md-4">
+                        <ul class="list-unstyled">
+                            <li class="d-inline-block ms-3"><i class="fab fa-google-plus-g fa-2x" style="cursor: pointer;"></i></li>
+                            <li class="d-inline-block ms-3"><i class="fab fa-google-play fa-2x" style="cursor: pointer;"></i></li>
+                            <li class="d-inline-block ms-3"><i class="fab fa-whatsapp-square fa-2x" style="cursor: pointer;"></i></li>
+                            <li class="d-inline-block ms-3"><i class="fab fa-instagram fa-2x" style="cursor: pointer;"></i></li>
+                            <li class="d-inline-block ms-3"><i class="fab fa-twitter-square fa-2x" style="cursor: pointer;"></i></li>
+                            <li class="d-inline-block ms-3"><i class="fab fa-facebook-square fa-2x" style="cursor: pointer;"></i></li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+                <hr>
+
+                <div class="row mt-5">
+                    <div class="col-md-3 text-sm-center">
+                        <img src="../img/logo.png" style="height: 100px; width: 150px;" class="mb-5">
+                        <h3 class="text-uppercase fw-bold mb-4">
+                            Liberty Electronics
+                        </h3>
+                        <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste ipsum ipsa, voluptatem libero nobis quibusdam.</p>
+                    </div>
+
+                    <div class="col-md-2 text-sm-center">
+                        <h3 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h3>
+                        <ul type="none" class="...">
+                            <li><a href="../html/apple.html" class="text-white">Apple</a></li>
+                            <li><a href="../html/dawlance.html" class="text-white">Dawlance</a></li>
+                            <li><a href="../html/dell.html" class="text-white">Dell</a></li>
+                            <li><a href="../html/gree.html" class="text-white">Gree</a></li>
+                            <li><a href="../html/samsung.html" class="text-white">Samsung</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 text-sm-center">
+                        <h3 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h3>
+                        <ul type="none">
+                            <li><a href="../html/index.html" class="text-white">Home</a></li>
+                            <li><a href="../html/products.html" class="text-white">Products</a></li>
+                            <li><a href="../html/login.html" class="text-white">Login</a></li>
+                            <li><a href="../html/about.html" class="text-white">About</a></li>
+                            <li><a href="../html/cart.html" class="text-white">Cart</a></li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i> info@example.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+            </section>
+            <!-- Section: Links  -->
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2021 Copyright:
+                <a class="text-reset fw-bold" href="../html/index.html">LIBERTY ELECTRONICS</a>
+            </div>
+            <!-- Copyright -->
+        </div>
+
+
+        </div>
+        </div>
+    </footer>
+
+
+    <!-- Footer End -->
+    <script>
+        $(document).ready(function() {
+            $('#aboutuspagetoggle').fadeOut(0);
+
+            $('#aboutuspage').click(function() {
+
+                $('#aboutuspagetoggle').fadeToggle(1000);
+
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+    <script src="../bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        let array = [{
+                id: 1,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/HAIER-AC 1.5ton.png",
+                title: "HAIER",
+                desc: "HAIER AC 1.5TON",
+                price: "$700"
+            }, {
+                id: 2,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/HRF-663ATA2.png",
+                title: "HAIER",
+                desc: "HAIER HRF-663ATA2",
+                price: "$300"
+            }, {
+                id: 3,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/HRF220TS3.png",
+                title: "HAIER",
+                desc: "HAIER HRF220TS3",
+                price: "$400"
+            }, {
+                id: 5,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/haier c290t hoods.png",
+                title: "HAIER",
+                desc: "HAIER C290T HOODS",
+                price: "$200"
+            }, {
+                id: 6,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/haier doubledoorefr.png",
+                title: "HAIER",
+                desc: "HAIER DOUBLE DOOR REFRIGERATOR",
+                price: "100"
+            }, {
+                id: 7,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/haier geeyser 5ltr.png",
+                title: "HAIER",
+                desc: "HAIER GEEYSER",
+                price: "$100"
+            }, {
+                id: 8,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/hdl-30mx80 haier oven.png",
+                title: "HAIER",
+                desc: "HAIER HDL-30MX80 OVEN",
+                price: "$150"
+            }, {
+                id: 9,
+                fulldesc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,",
+                src: "../img/haier items/hwm-100bs washingmachine.png",
+                title: "HAIER",
+                desc: "HAIER HWM-100BS WASHING MACHINE",
+                price: "$200"
+            }
+
+        ]
+
+        function showapplecards() {
+
+            for (var i = 0; i < array.length; i++) {
+
+
+
+                document.getElementById("apple_cards").innerHTML += `
+  <div class="col-md-4">
+    <div class="card p-3 rounded mt-4">
+        <img src="${array[i].src}"  width="100%"  height="350px"/>
+        <h3 class="mt-5">${array[i].title}</h3>
+        <p>${array[i].desc}</p>
+        <h4>${array[i].price}</h4>
+        <div class="d-flex justify-content-center">
+       <a href="./moreinfocard.html">
+            <button class="btn btn-primary  mx-auto mt-3" onclick="moreinfocard(${array[i].id})" ></i>MORE INFO</button>
+        </a>
+            <button class="btn btn-primary  mx-auto mt-3" onclick="addtocart(${array[i].id})"></i>Buy Product</button>
+        </div>
+        </div>
+    </div>
+    
+
+`
+
+            }
+        }
+        let newarr = [];
+        let obj = {};
+
+        function moreinfocard(id) {
+            let infocard;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i].id == id) {
+                    infocard = {
+                        id: array[i].id,
+                        title: array[i].title,
+                        src: array[i].src,
+                        desc: array[i].desc,
+                        price: array[i].price,
+                        fulldesc: array[i].fulldesc
+                    }
+                }
+            }
+
+            infocard = JSON.stringify(infocard);
+            localStorage.setItem("infocard", infocard);
+
+
+        }
+
+        function addtocart(id) {
+
+            for (var i = 0; i < array.length; i++) {
+                if (array[i].id == id) {
+                    obj = {
+                        id: array[i].id,
+                        title: array[i].title,
+                        src: array[i].src,
+                        desc: array[i].desc,
+                        price: array[i].price,
+                    }
+
+                }
+
+            }
+            newarr.push(obj);
+            console.log(newarr)
+        }
+
+        function addcards() {
+            newarr = JSON.stringify(newarr);
+            localStorage.setItem("product1", newarr);
+
+        }
+        showapplecards();
+    </script>
+    <style>
+        .contactformshow {
+            top: 20px;
+        }
+    </style>
+</body>
+
+</html>

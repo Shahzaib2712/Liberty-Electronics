@@ -1,0 +1,470 @@
+.logo {
+    width: 50px;
+    cursor: pointer;
+    margin: 0px 0;
+}
+
+.nav-link {
+    font-size: 18px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: black !important;
+    border-radius: 1px;
+    color: white !important;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.cards div {
+    border: 1px solid lightgrey;
+    position: relative;
+    width: 250px;
+    height: 380px;
+    margin: 10px;
+    text-align: center;
+    background: #fff;
+    padding: 7px;
+}
+
+.cards div:hover {
+    box-shadow: 0 0 10px 0 #fff;
+}
+
+.cards div img {
+    width: 240px;
+    height: 200px;
+}
+
+.cards div p {
+    color: dodgerblue;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-variant: small-caps;
+}
+
+.cards div h1 {
+    color: #333333;
+    font-size: 17px;
+    font-family: sans-serif;
+    width: 100%;
+    height: auto;
+}
+
+.cards div h3 {
+    color: blue;
+}
+
+.cards div button {
+    position: relative;
+    top: 10px;
+    width: 120px;
+    background: dodgerblue;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.img1 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img1:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img2 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img2:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img3 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img3:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img4 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img4:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img5 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img5:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img6 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img6:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img7 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img7:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img8 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img8:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img9 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img9:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img10 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img10:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img11 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img11:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img12 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img12:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img13 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img13:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img14 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img14:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img15 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img15:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img16 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img16:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img17 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img17:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img18 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img18:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img19 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img19:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img20 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img20:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img21 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img21:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img22 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img22:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img23 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img23:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img24 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img24:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img25 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img25:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img26 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img26:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img27 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img27:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img28 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img28:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img29 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img29:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img30 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img30:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img31 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img31:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img32 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img32:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img33 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img33:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img34 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img34:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img35 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img35:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img36 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img36:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img37 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img37:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img38 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img38:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img39 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img39:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img40 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img40:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img41 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img41:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img42 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img42:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img43 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img43:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.img44 {
+    transition: all 1s;
+    cursor: zoom-in;
+}
+
+.img44:hover {
+    transform: scale(1.2, 1.2);
+}
